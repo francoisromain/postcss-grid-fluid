@@ -1,13 +1,15 @@
 {
   "name": "postcss-grid-fluid",
   "version": "0.1.0",
-  "description": "PostCSS plugin to create fluid grids.",
+  "description": "A PostCSS plugin to create fluid grids.",
   "keywords": [
     "postcss",
     "css",
     "postcss-plugin",
     "grid",
     "fluid",
+    "flexbox",
+    "float",
     "calc"
   ],
   "author": "Francois Romain <francoisromain@gmail.com>",
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/francoisromain/postcss-grid-fluid/issues"
   },
-  "homepage": "https://github.com/francoisromain/postcss-grid-fluid",
+  "homepage": "http://francoisromain.github.io/postcss-grid-fluid/",
   "dependencies": {
     "postcss": "^5.0.19"
   },

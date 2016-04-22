@@ -9,7 +9,7 @@ export default (decl, margin, display) => {
 
   let declNew = [
     postcss.decl({ prop: 'clear', value: 'both' }),
-    postcss.decl({ prop: 'margin-right', value: margin }),
+    postcss.decl({ prop: 'margin-right', value: `-${margin}` }),
   ];
 
   if (display === 'flex') {
