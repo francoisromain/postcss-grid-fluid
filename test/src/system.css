@@ -8,7 +8,7 @@
 @import "system.css/forms.css";
 @import "system.css/tables.css";
 @import "system.css/utils.css";
-@import "system.css/grids.css";
+@import "system.css/grid-system.css";
 
 .container {
   gs: container;
