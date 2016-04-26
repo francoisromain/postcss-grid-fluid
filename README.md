@@ -38,7 +38,6 @@ See [PostCSS docs](https://github.com/postcss/postcss#usage) to setup with Gulp,
 Global settings rule (and default values):
 
 ``` css
-
 @gf {
   width: 1,          /* width/total of one blob */
   gutter:  0,        /* width of the gutter */
@@ -75,15 +74,12 @@ Rows are intended to contain a _blob_. They have a negative right margin.
 ## Examples
 
 ``` css
-
 .my-row {
   gf: row 1.5rem;
 }
-
 ```
 
 ``` css
-
 .my-blob {
   gf: blob 0.75;
 }
@@ -91,7 +87,6 @@ Rows are intended to contain a _blob_. They have a negative right margin.
 .my-blob-with-offset {
   gf: blob 3/4 1.5rem float;
 }
-
 ```
 
 01: [input](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/src/01.css), [output](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/dist/01.css), [markup](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/01.html), [demo](http://localhost/francoisromain.github.io/postcss-button/test/01.html)
