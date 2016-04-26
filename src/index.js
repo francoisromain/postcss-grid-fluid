@@ -9,15 +9,11 @@ module.exports = postcss.plugin('postcss-grid-fluid', (opts) => {
     width: '1',
   };
 
-  for (const i in options) {
-    if (opts && opts.hasOwnProperty(i) && options.hasOwnProperty(i)) {
-      options[i] = opts[i];
-    }
-  }
+  Object.assign(options, opts);
 
   return (css) => {
     css.walk((node) => {
-      if (node.type === 'atrule' && node.name.match(/^gf/)) {
+      if (node.type === 'atrule' && node.name.match(/^gf$/)) {
         node.walkDecls((decl) => {
           if (decl.prop.match(/^gutter/) ||
               decl.prop.match(/^display/) ||
@@ -26,8 +22,8 @@ module.exports = postcss.plugin('postcss-grid-fluid', (opts) => {
           }
         });
         node.remove();
-      } else if (node.type === 'decl' && node.prop.match(/^gf/)) {
-        const value = node.value.split(' ');
+      } else if (node.type === 'decl' && node.prop.match(/^gf$/)) {
+        const value = node.value.split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
         if (value[0] === 'row') {
           value[1] = value[1] || options.gutter;
           value[2] = value[2] || options.display;
