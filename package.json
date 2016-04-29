@@ -24,8 +24,6 @@
   },
   "scripts": {
     "build": "babel src --out-dir lib",
-    "test-01": "postcss --local-plugins -u ./lib/index -i test/src/01.css -o test/dist/01.css",
-    "test-02": "postcss --local-plugins -u ./lib/index -i test/src/02.css -o test/dist/02.css",
     "test": "ava && eslint *.js"
   },
   "main": "./lib/index.js",

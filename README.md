@@ -39,18 +39,15 @@ Global settings rule (and default values):
 
 ``` css
 @gf {
-  width: 1,          /* width/total of one blob */
-  gutter:  0,        /* width of the gutter */
-  display: flex      /* float or flex */  
+  width: 1;         /* width/total of one blob */
+  gutter: 0;        /* width of the gutter */
+  display: flex;    /* float or flex */  
 }
 ```
 
 * * * 
 
 ## Usage
-
-- [Rows](#rows)
-- [Blobs](#blobs)
 
 ### Rows
 
@@ -69,26 +66,6 @@ Rows are intended to contain a _blob_. They have a negative right margin.
 - _gutter_ (optional, default = 0): width of the gutter in `px` or `rem`.
 - _display_ (optional, default = `flex`): `float` or `flex`.
 
-* * * 
+Example 1: [input](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/src/01.css), [output](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/dist/01.css), [markup](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/01.html), [demo](http://localhost/francoisromain.github.io/postcss-button/test/01.html)
 
-## Examples
-
-``` css
-.my-row {
-  gf: row 1.5rem;
-}
-```
-
-``` css
-.my-blob {
-  gf: blob 0.75;
-}
-
-.my-blob-with-offset {
-  gf: blob 3/4 1.5rem float;
-}
-```
-
-01: [input](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/src/01.css), [output](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/dist/01.css), [markup](https://github.com/francoisromain/postcss-button/blob/gh-pages/test/01.html), [demo](http://localhost/francoisromain.github.io/postcss-button/test/01.html)
-
-02: [input](https://githubcom/francoisromain/postcss-button/blob/gh-pages/test/src/02.css), [output](https://github.comfrancoisromain/postcss-button/blob/gh-pages/test/dist/02.css), [markup](https://ithub.com/francoisromain/postcss-button/blob/gh-pages/test/02.html), [demo](http://localhost/francoisromain.github.io/postcss-button/test/02.html)
+Example 2: [input](https://githubcom/francoisromain/postcss-button/blob/gh-pages/test/src/02.css), [output](https://github.comfrancoisromain/postcss-button/blob/gh-pages/test/dist/02.css), [markup](https://ithub.com/francoisromain/postcss-button/blob/gh-pages/test/02.html), [demo](http://localhost/francoisromain.github.io/postcss-button/test/02.html)
