@@ -29,8 +29,5 @@
     "presets": [
       "es2015"
     ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
   }
 }
