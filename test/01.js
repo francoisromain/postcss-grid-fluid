@@ -4,7 +4,7 @@ const tests = {
 }
 
 .blob-float {
-  gf: blob 1/3 1.5rem;
+  gf: blob 1/3 1.5rem float;
 }
 
 .row-flex {
@@ -29,7 +29,8 @@ const tests = {
 .blob-float {
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-  flex: 0 1 calc(33.333333333333336% - 1.5rem);
+  width: calc(33.333333333333336% - 1.5rem);
+  float: left;
 }
 
 .row-flex {
