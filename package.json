@@ -1,6 +1,6 @@
 {
   "name": "postcss-grid-fluid",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "A PostCSS plugin to create fluid grids.",
   "keywords": [
     "postcss",
@@ -10,7 +10,8 @@
     "fluid",
     "flexbox",
     "float",
-    "calc"
+    "calc",
+    "postcss-structure"
   ],
   "author": "Francois Romain <francoisromain@gmail.com>",
   "license": "MIT",
