@@ -1,6 +1,6 @@
 import postcss from 'postcss';
 
-export default (decl, margin, display) => {
+export default (decl, gutter, display) => {
   const clearfixRule = postcss.rule({ selector: `${decl.parent.selector}::after` });
   clearfixRule.append({ prop: 'content', value: '""' });
   clearfixRule.append({ prop: 'display', value: 'table' });
@@ -9,8 +9,13 @@ export default (decl, margin, display) => {
 
   let declNew = [
     postcss.decl({ prop: 'clear', value: 'both' }),
-    postcss.decl({ prop: 'margin-right', value: `-${margin}` }),
   ];
+
+  if (gutter !== '0') {
+    declNew = declNew.concat([
+      postcss.decl({ prop: 'margin-right', value: `-${gutter}` }),
+    ]);
+  }
 
   if (display === 'flex') {
     declNew = declNew.concat([

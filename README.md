@@ -35,7 +35,17 @@ See [PostCSS docs](https://github.com/postcss/postcss#usage) to setup with Gulp,
 
 ## Configuration (optional)
 
-Global settings rule (and default values):
+#### Option 1: In javascript
+
+``` javascript
+{
+  width: 1;         /* width/total of one blob integer if there is a _total_ or a float smaller than 1. */
+  gutter: 0;        /* width of the gutter */
+  display: 'flex';  /* 'float' or 'flex' */  
+}
+```
+
+#### Option 2: in css
 
 ``` css
 @gf {
@@ -44,6 +54,8 @@ Global settings rule (and default values):
   display: flex;    /* float or flex */  
 }
 ```
+
+If no configuration, the default value.
 
 * * * 
 
