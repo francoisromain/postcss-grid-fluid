@@ -36,3 +36,22 @@
   margin-bottom: 1.5rem;
   flex: 0 1 calc(50% - 1.5rem);
 }
+
+.row-flex-0 {
+  clear: both;
+  margin-right: -0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.row-flex-0::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.blob-flex-0 {
+  flex: 0 1 50%;
+}

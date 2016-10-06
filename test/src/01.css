@@ -13,3 +13,11 @@
 .blob-flex {
   gf: blob 1/2 1.5rem;
 }
+
+.row-flex-0 {
+  gf: row 0;
+}
+
+.blob-flex-0 {
+  gf: blob 1/2 0;
+}
