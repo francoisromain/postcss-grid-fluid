@@ -6,7 +6,7 @@ export default (decl, ratio, gutter, display) => {
   let widthString;
   let declNew = [];
   if (width[1]) {
-    widthValue = 100 * width[0] / width[1];
+    widthValue = (100 * width[0]) / width[1];
   } else {
     widthValue = 100 * width[0];
   }

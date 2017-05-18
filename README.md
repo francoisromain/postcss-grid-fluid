@@ -39,9 +39,9 @@ See [PostCSS docs](https://github.com/postcss/postcss#usage) to setup with Gulp,
 
 ``` javascript
 {
-  width: 1;         /* width/total of one blob integer if there is a _total_ or a float smaller than 1. */
-  gutter: 0;        /* width of the gutter */
-  display: 'flex';  /* 'float' or 'flex' */  
+  width: 1,         /* width/total of one blob integer if there is a _total_ or a float smaller than 1. */
+  gutter: 0,        /* width of the gutter */
+  display: 'flex'   /* 'float' or 'flex' */  
 }
 ```
 
