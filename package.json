@@ -1,6 +1,6 @@
 {
   "name": "postcss-grid-fluid",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "A PostCSS plugin to create fluid grids.",
   "keywords": [
     "postcss",
@@ -21,6 +21,7 @@
   },
   "homepage": "http://francoisromain.github.io/postcss-grid-fluid/",
   "dependencies": {
+    "ava": "^0.19.1",
     "postcss": "^6.0.1"
   },
   "scripts": {
@@ -29,7 +30,6 @@
   },
   "main": "./lib/index.js",
   "devDependencies": {
-    "ava": "^0.19.1",
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.24.1",

@@ -23,7 +23,7 @@ module.exports = postcss.plugin('postcss-grid-fluid', (opts) => {
         });
         node.remove();
       } else if (node.type === 'decl' && node.prop.match(/^gf$/)) {
-        const value = node.value.split(/\s+(?![^\[]*\]|[^(]*\)|[^\{]*})/);
+        const value = node.value.split(/\s+(?![^[]*\]|[^(]*\)|[^{]*})/);
         if (value[0] === 'row') {
           value[1] = value[1] || options.gutter;
           value[2] = value[2] || options.display;

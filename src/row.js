@@ -5,7 +5,7 @@ export default (decl, gutter, display) => {
   clearfixRule.append({ prop: 'content', value: '""' });
   clearfixRule.append({ prop: 'display', value: 'table' });
   clearfixRule.append({ prop: 'clear', value: 'both' });
-  clearfixRule.moveAfter(decl.parent);
+  decl.parent.after(clearfixRule);
 
   let declNew = [
     postcss.decl({ prop: 'clear', value: 'both' }),
