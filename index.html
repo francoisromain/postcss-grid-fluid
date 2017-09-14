@@ -7,7 +7,7 @@
   <title>postcss-grid-fluid</title>
   <meta name="description" content="A PostCSS plugin to create CSS grids based on a fixed block width.">
   <meta name="keywords" content="Grid system, css, postcss, npm, masonry">
-  <link rel="stylesheet" href="//francoisromain.github.io/postcss-structure/dist/styles.css">
+  <link rel="stylesheet" href="https://francoisromain.github.io/system.css/dist/styles.css">
   <link rel="stylesheet" href="dist/grid-fluid.css">
 </head>
 
@@ -26,7 +26,7 @@
         <pre><code class="language-css">@gf {               /* default values */
   width: 1;         /* blob default width */
   gutter: 1.5rem;   /* gutter width */
-  display: flex;    /* float or flex */  
+  display: flex;    /* float or flex */
 }</code></pre>
       </div>
       <div class="bloc-code">
@@ -40,7 +40,7 @@
       <div class="bloc-code">
         <h4>Input</h4>
         <pre><code class="language-css">.my-class {
-  gf: row 1.5rem; 
+  gf: row 1.5rem;
 }</code></pre>
       </div>
       <div class="bloc-code">
@@ -67,7 +67,7 @@
       <div class="bloc-code">
         <h4>Input</h4>
         <pre><code class="language-css">.my-class {
-  gf: blob 1/3 1.5rem flex; 
+  gf: blob 1/3 1.5rem flex;
 }</code></pre>
       </div>
       <div class="bloc-code">
@@ -80,55 +80,55 @@
       </div>
     </div>
      <h4>Example</h4>
-    <div class="row">
-      <div class="blob-1-8 bg-alt pad">1/8</div>
-      <div class="blob-1-8 bg-alt pad">1/8</div>
-      <div class="blob-1-4 bg-alt pad">blob 1/4</div>
-      <div class="blob-1-6 bg-alt pad">blob 1/6</div>
-      <div class="blob-1-3 bg-alt pad">blob 1/3</div>
+    <div class="row h5">
+      <div class="blob-1-8 bg-alt p-s">1/8</div>
+      <div class="blob-1-8 bg-alt p-s">1/8</div>
+      <div class="blob-1-4 bg-alt p-s">blob 1/4</div>
+      <div class="blob-1-6 bg-alt p-s">blob 1/6</div>
+      <div class="blob-1-3 bg-alt p-s">blob 1/3</div>
     </div>
-    <div class="row">
-      <div class="blob-1-2 bg-alt pad">blob 1/2</div>
-      <div class="blob-1-2 bg-alt pad">blob 1/2</div>
+    <div class="row h5">
+      <div class="blob-1-2 bg-alt p-s">blob 1/2</div>
+      <div class="blob-1-2 bg-alt p-s">blob 1/2</div>
     </div>
-    <div class="row">
-      <div class="blob-1-3 bg-alt pad">blob 1/3</div>
-      <div class="blob-2-3 bg-alt pad">blob 2/3</div>
+    <div class="row h5">
+      <div class="blob-1-3 bg-alt p-s">blob 1/3</div>
+      <div class="blob-2-3 bg-alt p-s">blob 2/3</div>
     </div>
-    <div class="row">
-      <div class="blob-1-4 bg-alt pad">blob 1/4</div>
-      <div class="blob-3-4 bg-alt pad">blob 3/4</div>
+    <div class="row h5">
+      <div class="blob-1-4 bg-alt p-s">blob 1/4</div>
+      <div class="blob-3-4 bg-alt p-s">blob 3/4</div>
     </div>
-    <div class="row">
-      <div class="blob-2-5 bg-alt pad">blob 2/5</div>
-      <div class="blob-3-5 bg-alt pad">blob 3/5</div>
+    <div class="row h5">
+      <div class="blob-2-5 bg-alt p-s">blob 2/5</div>
+      <div class="blob-3-5 bg-alt p-s">blob 3/5</div>
     </div>
-    <div class="row">
-      <div class="blob-1-6 bg-alt pad">blob 1/6</div>
-      <div class="blob-1-6 bg-alt pad">blob 1/6</div>
-      <div class="blob-4-6 bg-alt pad">blob 4/6</div>
+    <div class="row h5">
+      <div class="blob-1-6 bg-alt p-s">blob 1/6</div>
+      <div class="blob-1-6 bg-alt p-s">blob 1/6</div>
+      <div class="blob-4-6 bg-alt p-s">blob 4/6</div>
     </div>
-    <div class="row">
-      <div class="blob-1-7 bg-alt pad">blob 1/7</div>
-      <div class="blob-2-7 bg-alt pad">blob 2/7</div>
-      <div class="blob-4-7 bg-alt pad">blob 4/7</div>
+    <div class="row h5">
+      <div class="blob-1-7 bg-alt p-s">blob 1/7</div>
+      <div class="blob-2-7 bg-alt p-s">blob 2/7</div>
+      <div class="blob-4-7 bg-alt p-s">blob 4/7</div>
     </div>
-    <div class="row">
-      <div class="blob-1-8 bg-alt pad">blob 1/8</div>
-      <div class="blob-2-8 bg-alt pad">blob 2/8</div>
-      <div class="blob-2-8 bg-alt pad">blob 2/8</div>
-      <div class="blob-3-8 bg-alt pad">blob 3/8</div>
+    <div class="row h5">
+      <div class="blob-1-8 bg-alt p-s">blob 1/8</div>
+      <div class="blob-2-8 bg-alt p-s">blob 2/8</div>
+      <div class="blob-2-8 bg-alt p-s">blob 2/8</div>
+      <div class="blob-3-8 bg-alt p-s">blob 3/8</div>
     </div>
-    <div class="row">
-      <div class="blob-1-18 bg-alt pad">.</div>
-      <div class="blob-1-6 bg-alt pad">blob 1/6</div>
-      <div class="blob-2-9 bg-alt pad">blob 2/9</div>
-      <div class="blob-5-9 bg-alt pad">blob 5/9</div>
+    <div class="row h5">
+      <div class="blob-1-18 bg-alt p-s">.</div>
+      <div class="blob-1-6 bg-alt p-s">blob 1/6</div>
+      <div class="blob-2-9 bg-alt p-s">blob 2/9</div>
+      <div class="blob-5-9 bg-alt p-s">blob 5/9</div>
     </div>
   </main>
   <footer>
     <div class="container">
-      <hr class="margin-top-xs" />
+      <hr class="mt-xs" />
       <p class="s">© 2017 <a href="http://francoisromain.com">François Romain</a> | <a href="https://twitter.com/francoisromain">Twitter</a> | <a href="https://github.com/francoisromain">Github</a></p>
     </div>
   </footer>
