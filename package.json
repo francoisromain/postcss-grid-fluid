@@ -10,8 +10,8 @@
     "css-grid-fluid": "postcss src/grid-fluid.css -o dist/grid-fluid.css",
     "css-01": "postcss test/src/01.css -o test/dist/01.css",
     "css-02": "postcss test/src/02.css -o test/dist/02.css",
-    "dist": "npm run babel && npm run css-grid-fluid",
-    "test": "npm run babel && npm run css-grid-fluid && npm run css-01 && npm run css-02",
+    "dist": "npm run babel",
+    "test": "npm run babel && npm run css-01 && npm run css-02",
     "watch": "onchange 'index.html' 'src/**/*.*' 'postcss-grid-fluid/src/**/*.*' -- npm run build",
     "reload": "livereload",
     "start": "npm-run-all --parallel watch reload"
