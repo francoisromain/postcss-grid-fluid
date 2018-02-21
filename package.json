@@ -1,6 +1,6 @@
 {
   "name": "postcss-grid-fluid",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A PostCSS plugin to create fluid grids.",
   "keywords": [
     "postcss",
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "dist": "babel src --out-dir lib",
-    "test": "ava && eslint *.js"
+    "test": "npm run dist && ava && eslint *.js"
   },
   "main": "./lib/index.js",
   "devDependencies": {
