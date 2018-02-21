@@ -17,7 +17,7 @@ const tests = {
 `,
   output: `.row-float {
   clear: both;
-  margin-right: -1.5rem;
+  margin-right: calc(-1 * 1.5rem);
 }
 
 .row-float::after {
@@ -35,7 +35,7 @@ const tests = {
 
 .row-flex {
   clear: both;
-  margin-right: -1.5rem;
+  margin-right: calc(-1 * 1.5rem);
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;

@@ -7,13 +7,11 @@ export default (decl, gutter, display) => {
   clearfixRule.append({ prop: 'clear', value: 'both' });
   decl.parent.after(clearfixRule);
 
-  let declNew = [
-    postcss.decl({ prop: 'clear', value: 'both' }),
-  ];
+  let declNew = [postcss.decl({ prop: 'clear', value: 'both' })];
 
   if (gutter !== '0') {
     declNew = declNew.concat([
-      postcss.decl({ prop: 'margin-right', value: `-${gutter}` }),
+      postcss.decl({ prop: 'margin-right', value: `calc(-1 * ${gutter})` }),
     ]);
   }
 
