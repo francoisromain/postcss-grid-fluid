@@ -21,7 +21,6 @@ export default (decl, ratio, gutter, display) => {
     widthString = `calc(${widthValue}% - ${gutter})`;
     declNew = declNew.concat([
       postcss.decl({ prop: 'margin-right', value: gutter }),
-      postcss.decl({ prop: 'margin-bottom', value: gutter }),
     ]);
   }
 

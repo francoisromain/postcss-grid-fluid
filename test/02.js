@@ -61,25 +61,21 @@ const tests = {
 
 .blob {
   margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
   flex: 0 1 calc(100% - 1.5rem);
 }
 
 .blob-1 {
   margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
   flex: 0 1 calc(100% - 1.5rem)
 }
 
 .blob-1-8 {
   margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
   flex: 0 1 calc(12.5% - 1.5rem);
 }
 
 .blob-1-3 {
   margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
   flex: 0 1 calc(33.333333333333336% - 1.5rem);
 }
 
@@ -96,21 +92,18 @@ const tests = {
 
 .blob-2-5 {
   margin-right: 10px;
-  margin-bottom: 10px;
   width: calc(40% - 10px);
   float: left;
 }
 
 .blob-3-5 {
   margin-right: 10px;
-  margin-bottom: 10px;
   width: calc(60% - 10px);
   float: left;
 }
 
 .blob-4-7 {
   margin-right: 10px;
-  margin-bottom: 10px;
   width: calc(57.142857142857146% - 10px);
   float: left;
 }
