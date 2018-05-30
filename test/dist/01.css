@@ -1,6 +1,6 @@
 .row-float {
   clear: both;
-  margin-right: -1.5rem;
+  margin-right: calc(-1 * 1.5rem);
 }
 
 .row-float::after {
@@ -11,14 +11,13 @@
 
 .blob-float {
   margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
   width: calc(33.333333333333336% - 1.5rem);
   float: left;
 }
 
 .row-flex {
   clear: both;
-  margin-right: -1.5rem;
+  margin-right: calc(-1 * 1.5rem);
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -33,7 +32,6 @@
 
 .blob-flex {
   margin-right: 1.5rem;
-  margin-bottom: 1.5rem;
   flex: 0 1 calc(50% - 1.5rem);
 }
 
