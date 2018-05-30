@@ -1,8 +1,8 @@
-import postcss from 'postcss';
-import row from './row';
-import blob from './blob';
+const postcss = require('postcss');
+const row = require('./row');
+const blob = require('./blob');
 
-module.exports = postcss.plugin('postcss-grid-fluid', (opts) => {
+const postcssGridFluid = postcss.plugin('postcss-grid-fluid', (opts) => {
   const options = {
     gutter: '0',
     display: 'flex',
@@ -15,9 +15,11 @@ module.exports = postcss.plugin('postcss-grid-fluid', (opts) => {
     css.walk((node) => {
       if (node.type === 'atrule' && node.name.match(/^gf$/)) {
         node.walkDecls((decl) => {
-          if (decl.prop.match(/^gutter/) ||
-              decl.prop.match(/^display/) ||
-              decl.prop.match(/^width/)) {
+          if (
+            decl.prop.match(/^gutter/) ||
+            decl.prop.match(/^display/) ||
+            decl.prop.match(/^width/)
+          ) {
             options[decl.prop] = decl.value;
           }
         });
@@ -38,3 +40,5 @@ module.exports = postcss.plugin('postcss-grid-fluid', (opts) => {
     });
   };
 });
+
+module.exports = postcssGridFluid;

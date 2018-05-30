@@ -1,6 +1,6 @@
 {
   "name": "postcss-grid-fluid",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "A PostCSS plugin to create fluid grids.",
   "keywords": [
     "postcss",
@@ -44,8 +44,12 @@
     "extends": "airbnb"
   },
   "ava": {
-    "files": ["test/tests.js"],
-    "require": ["@babel/register"]
+    "files": [
+      "test/tests.js"
+    ],
+    "require": [
+      "@babel/register"
+    ]
   },
   "babel": {
     "presets": [
@@ -53,7 +57,7 @@
         "@babel/preset-env",
         {
           "targets": {
-            "node": "8"
+            "node": "current"
           }
         }
       ]

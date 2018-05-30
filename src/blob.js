@@ -1,12 +1,12 @@
-import postcss from 'postcss';
+const postcss = require('postcss');
 
-export default (decl, ratio, gutter, display) => {
+const blob = (decl, ratio, gutter, display) => {
   const width = ratio.split('/');
   let widthValue;
   let widthString;
   let declNew = [];
   if (width[1]) {
-    widthValue = (100 * width[0]) / width[1];
+    widthValue = 100 * width[0] / width[1];
   } else {
     widthValue = 100 * width[0];
   }
@@ -19,15 +19,11 @@ export default (decl, ratio, gutter, display) => {
     widthString = `${widthValue}%`;
   } else {
     widthString = `calc(${widthValue}% - ${gutter})`;
-    declNew = declNew.concat([
-      postcss.decl({ prop: 'margin-right', value: gutter }),
-    ]);
+    declNew = declNew.concat([postcss.decl({ prop: 'margin-right', value: gutter })]);
   }
 
   if (display === 'flex') {
-    declNew = declNew.concat([
-      postcss.decl({ prop: 'flex', value: `0 1 ${widthString}` }),
-    ]);
+    declNew = declNew.concat([postcss.decl({ prop: 'flex', value: `0 1 ${widthString}` })]);
   } else if (display === 'float') {
     declNew = declNew.concat([
       postcss.decl({ prop: 'width', value: `${widthString}` }),
@@ -37,3 +33,5 @@ export default (decl, ratio, gutter, display) => {
 
   decl.replaceWith(declNew);
 };
+
+module.exports = blob;

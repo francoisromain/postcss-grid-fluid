@@ -1,6 +1,6 @@
-import postcss from 'postcss';
+const postcss = require('postcss');
 
-export default (decl, gutter, display) => {
+const row = (decl, gutter, display) => {
   const clearfixRule = postcss.rule({ selector: `${decl.parent.selector}::after` });
   clearfixRule.append({ prop: 'content', value: '""' });
   clearfixRule.append({ prop: 'display', value: 'table' });
@@ -26,3 +26,5 @@ export default (decl, gutter, display) => {
 
   decl.replaceWith(declNew);
 };
+
+module.exports = row;
