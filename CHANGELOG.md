@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 (2018.5.30)
+
+* fix: update dependencies to fix npm audit warning
+
 ## 0.3.0 (2018.4.10)
 
 * feat: (breaking) remove bottom margin on blobs.
