@@ -16,9 +16,9 @@ const postcssGridFluid = postcss.plugin('postcss-grid-fluid', (opts) => {
       if (node.type === 'atrule' && node.name.match(/^gf$/)) {
         node.walkDecls((decl) => {
           if (
-            decl.prop.match(/^gutter/) ||
-            decl.prop.match(/^display/) ||
-            decl.prop.match(/^width/)
+            decl.prop.match(/^gutter/)
+            || decl.prop.match(/^display/)
+            || decl.prop.match(/^width/)
           ) {
             options[decl.prop] = decl.value;
           }

@@ -1,6 +1,6 @@
 {
   "name": "postcss-grid-fluid",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A PostCSS plugin to create fluid grids.",
   "keywords": [
     "postcss",
@@ -21,24 +21,24 @@
   },
   "homepage": "http://francoisromain.github.io/postcss-grid-fluid/",
   "dependencies": {
-    "postcss": "^6.0.22"
+    "postcss": "^7.0.17"
   },
   "scripts": {
     "dist": "babel src --out-dir lib",
-    "test": "npm run dist && ava && eslint *.js"
+    "test": "npm run dist && ava && eslint '**/*.js'"
   },
   "main": "./lib/index.js",
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.47",
-    "@babel/core": "^7.0.0-beta.47",
-    "@babel/preset-env": "^7.0.0-beta.47",
-    "@babel/register": "^7.0.0-beta.47",
-    "ava": "^1.0.0-beta.4",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.8.2"
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "ava": "^2.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0"
   },
   "eslintConfig": {
     "extends": "airbnb"
