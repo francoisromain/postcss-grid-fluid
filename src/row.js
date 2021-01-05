@@ -1,7 +1,9 @@
 const postcss = require('postcss');
 
 const row = (decl, gutter, display) => {
-  const clearfixRule = postcss.rule({ selector: `${decl.parent.selector}::after` });
+  const clearfixRule = postcss.rule({
+    selector: `${decl.parent.selector}::after`,
+  });
   clearfixRule.append({ prop: 'content', value: '""' });
   clearfixRule.append({ prop: 'display', value: 'table' });
   clearfixRule.append({ prop: 'clear', value: 'both' });

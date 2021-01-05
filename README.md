@@ -7,57 +7,59 @@
 A [PostCSS] plugin to create fluid grids.
 
 [github.io]: http://francoisromain.github.io/postcss-grid-fluid
-[PostCSS]:   https://github.com/postcss/postcss
-[ci-img]:    https://travis-ci.org/francoisromain/postcss-grid-fluid.svg
-[ci]:        https://travis-ci.org/francoisromain/postcss-grid-fluid
-[npm-img]:   https://badge.fury.io/js/postcss-grid-fluid.svg
-[npm]:       https://badge.fury.io/js/postcss-grid-fluid
-[dep-img]:   https://david-dm.org/francoisromain/postcss-grid-fluid.svg
-[dep]:       https://david-dm.org/francoisromain/postcss-grid-fluid
+[postcss]: https://github.com/postcss/postcss
+[ci-img]: https://travis-ci.org/francoisromain/postcss-grid-fluid.svg
+[ci]: https://travis-ci.org/francoisromain/postcss-grid-fluid
+[npm-img]: https://badge.fury.io/js/postcss-grid-fluid.svg
+[npm]: https://badge.fury.io/js/postcss-grid-fluid
+[dep-img]: https://david-dm.org/francoisromain/postcss-grid-fluid.svg
+[dep]: https://david-dm.org/francoisromain/postcss-grid-fluid
 
-* * * 
+---
 
 ## Installation
 
 Install the [npm package](https://www.npmjs.com/package/postcss-grid-fluid):
 
-    $ npm install postcss-grid-fluid --save-dev
+```bash
+npm install postcss postcss-grid-fluid --save-dev
+```
 
 Require the PostCSS plugin:
 
-``` js
-postcss([ require('postcss-grid-fluid') ])
+```js
+postcss([require('postcss-grid-fluid')]);
 ```
 
-See [PostCSS docs](https://github.com/postcss/postcss#usage) to setup with Gulp, Grunt, Webpack, npm scripts… 
+See [PostCSS docs](https://github.com/postcss/postcss#usage) to setup with Gulp, Grunt, Webpack, npm scripts…
 
-* * * 
+---
 
 ## Configuration (optional)
 
 #### Option 1: In javascript
 
-``` javascript
+```javascript
 {
   width: 1,         /* width/total of one blob integer if there is a _total_ or a float smaller than 1. */
   gutter: 0,        /* width of the gutter */
-  display: 'flex'   /* 'float' or 'flex' */  
+  display: 'flex'   /* 'float' or 'flex' */
 }
 ```
 
 #### Option 2: in css
 
-``` css
+```css
 @gf {
-  width: 1;         /* width/total of one blob */
-  gutter: 0;        /* width of the gutter */
-  display: flex;    /* float or flex */  
+  width: 1; /* width/total of one blob */
+  gutter: 0; /* width of the gutter */
+  display: flex; /* float or flex */
 }
 ```
 
 If no configuration, the default value.
 
-* * * 
+---
 
 ## Usage
 
@@ -73,7 +75,7 @@ Rows are intended to contain a _blob_. They have a negative right margin.
 
 `gf: blob [width](/[total]) ([gutter]) ([display])`
 
-- _width_: width of the blob. Could be an integer if there is a _total_ or a float smaller than 1. 
+- _width_: width of the blob. Could be an integer if there is a _total_ or a float smaller than 1.
 - _total_ (optional, default = 1): divider of the container width.
 - _gutter_ (optional, default = 0): width of the gutter in `px` or `rem`.
 - _display_ (optional, default = `flex`): `float` or `flex`.
