@@ -1,32 +1,30 @@
-const postcss = require('postcss');
-
-const row = (decl, gutter, display) => {
-  const clearfixRule = postcss.rule({
-    selector: `${decl.parent.selector}::after`,
+const row = (node, gutter, display, { decl, rule }) => {
+  const clearfixRule = rule({
+    selector: `${node.parent.selector}::after`,
   });
   clearfixRule.append({ prop: 'content', value: '""' });
   clearfixRule.append({ prop: 'display', value: 'table' });
   clearfixRule.append({ prop: 'clear', value: 'both' });
-  decl.parent.after(clearfixRule);
+  node.parent.after(clearfixRule);
 
-  let declNew = [postcss.decl({ prop: 'clear', value: 'both' })];
+  let nodeNew = [decl({ prop: 'clear', value: 'both' })];
 
   if (gutter !== '0') {
-    declNew = declNew.concat([
-      postcss.decl({ prop: 'margin-right', value: `calc(-1 * ${gutter})` }),
+    nodeNew = nodeNew.concat([
+      decl({ prop: 'margin-right', value: `calc(-1 * ${gutter})` }),
     ]);
   }
 
   if (display === 'flex') {
-    declNew = declNew.concat([
-      postcss.decl({ prop: 'display', value: 'flex' }),
-      postcss.decl({ prop: 'flex-flow', value: 'row wrap' }),
-      postcss.decl({ prop: 'align-items', value: 'flex-start' }),
-      postcss.decl({ prop: 'align-content', value: 'flex-start' }),
+    nodeNew = nodeNew.concat([
+      decl({ prop: 'display', value: 'flex' }),
+      decl({ prop: 'flex-flow', value: 'row wrap' }),
+      decl({ prop: 'align-items', value: 'flex-start' }),
+      decl({ prop: 'align-content', value: 'flex-start' }),
     ]);
   }
 
-  decl.replaceWith(declNew);
+  node.replaceWith(nodeNew);
 };
 
 module.exports = row;
